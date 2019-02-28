@@ -7,15 +7,23 @@ export default class DaumMapComponent extends Component {
     this.state = {};
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
+    console.log("디드마운트");
+
     const container = document.getElementById("map");
-    new window.daum.maps.Map(container, {
-      center: new window.daum.maps.LatLng(33.450701, 126.570667),
-      zoom: "3"
-    });
-  };
+    const options = {
+      center: new window.daum.maps.LatLng(
+        this.props.position.lat,
+        this.props.position.lng
+      ),
+      zoom: this.props.zoom
+    };
+
+    new window.daum.maps.Map(container, options);
+  }
 
   render() {
+    console.log(this.props.position.lat);
     console.log("이것이 맵이다");
     return <div id="map" />;
   }
