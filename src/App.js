@@ -3,9 +3,15 @@ import DaumMapComponent from "./component/DaumMapComponent";
 import Marker from "./component/tools/Marker";
 import Polygon from "./component/tools/Polygon";
 import MapControlPanel from "./component/tools/MapControlPanel";
-import "./App.css";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {}
+
   render() {
     return (
       <React.Fragment>
