@@ -3,9 +3,10 @@ import React, { Component } from "react";
 export default class Marker extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      markers: []
+    };
   }
-  componentDidMount() {}
 
   render() {
     return <div />;
